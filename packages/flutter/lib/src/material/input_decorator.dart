@@ -2460,6 +2460,7 @@ class InputDecoration {
     this.iconColor,
     this.label,
     this.labelText,
+    this.isMandatoryField,
     this.labelStyle,
     this.floatingLabelStyle,
     this.helperText,
@@ -2533,6 +2534,7 @@ class InputDecoration {
        iconColor = null,
        label = null,
        labelText = null,
+       isMandatoryField = null,
        labelStyle = null,
        floatingLabelStyle = null,
        helperText = null,
@@ -2616,6 +2618,8 @@ class InputDecoration {
   ///
   /// Only one of [label] and [labelText] can be specified.
   final Widget? label;
+
+  final bool? isMandatoryField;
 
   /// Optional text that describes the input field.
   ///
@@ -3389,6 +3393,7 @@ class InputDecoration {
     Color? iconColor,
     Widget? label,
     String? labelText,
+    bool? isMandatoryField,
     TextStyle? labelStyle,
     TextStyle? floatingLabelStyle,
     String? helperText,
@@ -3441,6 +3446,7 @@ class InputDecoration {
       iconColor: iconColor ?? this.iconColor,
       label: label ?? this.label,
       labelText: labelText ?? this.labelText,
+      isMandatoryField: isMandatoryField ?? this.isMandatoryField,
       labelStyle: labelStyle ?? this.labelStyle,
       floatingLabelStyle: floatingLabelStyle ?? this.floatingLabelStyle,
       helperText: helperText ?? this.helperText,
@@ -3540,6 +3546,7 @@ class InputDecoration {
         && other.iconColor == iconColor
         && other.label == label
         && other.labelText == labelText
+        && other.isMandatoryField == isMandatoryField
         && other.labelStyle == labelStyle
         && other.floatingLabelStyle == floatingLabelStyle
         && other.helperText == helperText
@@ -3595,6 +3602,7 @@ class InputDecoration {
       iconColor,
       label,
       labelText,
+      isMandatoryField,
       floatingLabelStyle,
       labelStyle,
       helperText,
